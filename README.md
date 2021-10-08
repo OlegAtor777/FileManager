@@ -1,2 +1,2 @@
 # FileManager
-Pract01
+Программа запускается через main.py
