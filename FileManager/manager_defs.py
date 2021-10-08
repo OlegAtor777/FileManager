@@ -1,7 +1,8 @@
 #manager defs
 import os
 import shutil
-root = os.getcwd()+'\\root'
+root = os.getcwd()+'\\root' #переменная пути к папке
+os.mkdir('root')
 os.chdir(root)
 
 
