@@ -1,14 +1,13 @@
 #manager defs
 import os
 import shutil
-root = os.getcwd()+'\\root' #переменная пути к папке
-os.mkdir('root')
-os.chdir(root)
+r00t = os.getcwd()+'\\root' #переменная пути к папке
+
 
 
 def cwd (*arg): # текущее расположение
 
-    return print("\\"+os.getcwd()[len(root)+1:])
+    return print("\\"+os.getcwd()[len(r00t)+1:])
 
 def mkfol(*arg): #создание папки
     try:
@@ -28,7 +27,7 @@ def delfol(*arg):# удаление папки
         return print('Папка не пуста')
     
 def chfol(*arg):# перемещение из папки
-    if arg[0][0] == '..' and os.getcwd()==root:
+    if arg[0][0] == '..' and os.getcwd()==r00t:
         return print('Запрещено')
     try:
         os.chdir(arg[0][0])
@@ -81,7 +80,7 @@ def delfile(*arg):# удаление файла
  
 def copy(*arg):
     try:
-        shutil.copy(arg[0][0], root+'/'+arg[0][1])
+        shutil.copy(arg[0][0], r00t+'/'+arg[0][1])
         return 'ok'
     except OSError:
         return print('Директории или файла не существует, либо они не доступны')
@@ -90,7 +89,7 @@ def copy(*arg):
     
 def move(*arg):# перемещение файла
     try:
-        shutil.move(arg[0][0], root+'/'+arg[0][1])
+        shutil.move(arg[0][0], r00t+'/'+arg[0][1])
         return 'ok'
         
     except FileNotFoundError:
